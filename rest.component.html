@@ -1,0 +1,16 @@
+<input type="text" placeholder="Services" [(ngModel)]="name">
+<button (click)="searchForUser()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    
+<!-- <div>
+  <h3>{{responseBack ?.name}}</h3>
+  <p>{{responseBack ?.company}}</p>
+  <p>{{responseBack ?.followers}}</p>
+  <p>{{responseBack ?.location}}</p>
+</div> -->
+
+<div *ngIf="responseBack" class="container-fluid">
+  <h3 > Name of service: {{responseBack.name}}</h3>
+ <!-- <p>Service ID: {{responseBack.service_id}}</p>-->
+  <p>Cost: {{responseBack.cost}}</p>
+  <p>Description of service: {{responseBack.description}}</p>
+</div>
